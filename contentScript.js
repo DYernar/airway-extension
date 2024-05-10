@@ -62,7 +62,7 @@ async function fillApartmentData(url) {
     div = document.getElementsByClassName("offer__short-description")[0];
 
     greens_index = await getGreensIndex({})
-    greens_color = getColorFromIndex(greens_index);
+    greens_color = getGreensColorFromIndex(greens_index);
 
     krisha_html_row_indexed = krisha_html_row.replace("{{index}}", apartment_index);
     krisha_html_row_indexed = krisha_html_row_indexed.replace("{{color}}", color);
@@ -99,6 +99,16 @@ function getColorFromIndex(index) {
         return "#ff6600";
     } else {
         return "#00ff00";
+    }
+}
+
+function getGreensColorFromIndex(index) {
+    if (index > 60) {
+        return "#00ff00";
+    } else if (index > 30) {
+        return "#ff6600";
+    } else {
+        return "#ff0000";
     }
 }
 
