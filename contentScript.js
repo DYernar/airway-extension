@@ -8,7 +8,7 @@ kolesa_html_row = `
         </span>
     </div>
     <div>
-        <a style="margin-left: 35px; font-size: 12px" href="https://www.airway.ai">Посмотреть полный отчет по экологичности авто</a>
+        <a style="margin-left: 35px; font-size: 12px" href="https://sites.google.com/nu.edu.kz/airway/home">Посмотреть полный отчет по экологичности авто</a>
     </div>
   </div>       
 `;
@@ -27,7 +27,7 @@ krisha_html_row = `
         </span>
     </div>
     <div>
-        <a style="margin-left: 35px; font-size: 12px" href="https://www.airway.ai">Посмотреть полный отчет по экологичности района</a>
+        <a style="margin-left: 35px; font-size: 12px" href="https://sites.google.com/nu.edu.kz/airway/home">Посмотреть полный отчет по экологичности района</a>
     </div>
   </div>
 `;
