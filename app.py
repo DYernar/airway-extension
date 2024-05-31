@@ -176,9 +176,10 @@ def find_objects():
     coords = data.get('coords')
     object_to_search = data.get('objectType')
     distance = data.get('distance')
-    print(coords)
-    print(distance)
-    two_gis_key = os.getenv('OPENAI_API_KEY')
+
+
+    two_gis_key = os.getenv('TWOGIS_API_KEY')
+
     number_of_objects = make_2gis_request_and_return_object_count(
     two_gis_key,
     coords['lat'],
@@ -187,7 +188,6 @@ def find_objects():
     distance,
     object_to_search
     )
-    print(number_of_objects)
 
     return jsonify(count=number_of_objects)
 
