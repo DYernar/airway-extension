@@ -14,7 +14,8 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "48": "./assets/images/car.png"
+      "48": "./assets/images/car48.png",
+      "96": "./assets/images/car96.png"
     }
   },
   "web_accessible_resources":[

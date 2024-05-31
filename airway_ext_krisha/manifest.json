@@ -14,7 +14,8 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "48": "./assets/images/air_q_ext_window1.png"
+      "48": "./assets/images/air_q_ext_window1.png",
+      "96": "./assets/images/air_q_ext_window2.png"
     }
   },
   "web_accessible_resources":[
