@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Listing Analyzer",
+  "name": "Krisha Listing Analyzer",
   "version": "1.0",
   "description": "Analyze real estate listings for air quality and nearby infrastructure.",
   "permissions": [
