@@ -59,7 +59,7 @@ function fetchData() {
             })
             .catch(error => {
               console.error('Fetch error:', error);
-              document.getElementById('result').innerHTML = '<p>Error retrieving data</p>';
+              document.getElementById('result').innerHTML = '<p>Возникла ошибка, попробуйте еще раз</p>';
             });
           } else {
             document.getElementById('result').innerHTML = '<p>Перейдите на страницу объявления для получения отчета</p>';
