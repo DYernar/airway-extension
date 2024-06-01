@@ -285,8 +285,8 @@ def test_generate_report_for_an_apartment(
         fill=(0, 0, 0))
     drawCertificate.text((45, 550), "Концентрация вредных частиц в воздухе", font=labelFont, fill=(0, 0, 0))
 
-    drawCertificate.text((125, 750), "PM 2.5", font=labelFont, fill=(185, 0, 0))
-    drawCertificate.text((400, 750), f"{pm25}", font=labelFont, fill=(0, 0, 0))
+    drawCertificate.text((125, 750), "PM 2.5 ", font=labelFont, fill=(185, 0, 0))
+    drawCertificate.text((400, 750), f"{pm25} μg/m3", font=labelFont, fill=(0, 0, 0))
     drawCertificate.text(
         (50, 820),
         "Концентрация вредных взвешенных \n твердых микрочастиц \n (2,5 мкм в диаметре), содержащихся в воздухе",
@@ -294,11 +294,11 @@ def test_generate_report_for_an_apartment(
         fill=(0, 0, 0))
 
     drawCertificate.text((125, 920), "PM 10", font=labelFont, fill=(185, 0, 0))
-    drawCertificate.text((400, 920), f"{pm10}", font=labelFont, fill=(0, 0, 0))
+    drawCertificate.text((400, 920), f"{pm10} μg/m3", font=labelFont, fill=(0, 0, 0))
     drawCertificate.text((50, 990), "Концентрация вредных взвешенных \n твердых микрочастиц (10 мкм в диаметре), \n содержащихся в воздухе", font=metricDescriptionFont, fill=(0, 0, 0))
 
     drawCertificate.text((125, 1090), "CO", font=labelFont, fill=(185, 0, 0))
-    drawCertificate.text((410, 1090), f"{co}", font=labelFont, fill=(0, 0, 0))
+    drawCertificate.text((410, 1090), f"{co} ppm", font=labelFont, fill=(0, 0, 0))
     drawCertificate.text((50, 1160), "Концентрация вредных мооноксида \n углерода содержащегося \n в воздухе", font=metricDescriptionFont, fill=(0, 0, 0))
 
     if aqIndex <= 40:
