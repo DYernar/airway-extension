@@ -54,8 +54,8 @@ function fetchData() {
               saveResult(activeTab.url, data);  // Save the result to chrome.storage.local
               // Show the infrastructure section
               document.querySelector('.infrastructure-section').classList.remove('hidden');
-              console.log(data)
-              fetchReportImage(data);
+             // console.log(data)
+              // fetchReportImage(data);
             })
             .catch(error => {
               console.error('Fetch error:', error);
@@ -144,7 +144,7 @@ function displayResult(data) {
       </div>
     </ul>
   `;
-  document.getElementById('viewReport').style.display = 'inline-block';
+  //document.getElementById('viewReport').style.display = 'inline-block';
 
 
   document.getElementById('result').innerHTML = resultHtml;
