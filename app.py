@@ -89,7 +89,7 @@ def analyze_krisha():
         if aq_index_numeric_saved >= 90:
             result['aq_index_numeric'] = "Опасная"
 
-        two_gis_key = os.getenv('OPENAI_API_KEY')
+        two_gis_key = os.getenv('TWOGIS_API_KEY')
         parks = make_2gis_request_and_return_object_count(
         two_gis_key,
             new_coords['Latitude'],
