@@ -54,8 +54,9 @@ function fetchData() {
               saveResult(activeTab.url, data);  // Save the result to chrome.storage.local
               // Show the infrastructure section
               document.querySelector('.infrastructure-section').classList.remove('hidden');
-             // console.log(data)
-              // fetchReportImage(data);
+              if(data.city === 'Almaty'){
+                fetchReportImage(data);
+              }
             })
             .catch(error => {
               console.error('Fetch error:', error);
@@ -144,8 +145,9 @@ function displayResult(data) {
       </div>
     </ul>
   `;
-  //document.getElementById('viewReport').style.display = 'inline-block';
-
+  if (city === 'Almaty') {
+    document.getElementById('viewReport').style.display = 'inline-block';
+  }
 
   document.getElementById('result').innerHTML = resultHtml;
 
