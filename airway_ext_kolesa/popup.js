@@ -29,7 +29,7 @@ function fetchData() {
         (results) => {
           if (chrome.runtime.lastError || !results || !results[0]) {
             console.error('Error executing script:', chrome.runtime.lastError);
-            document.getElementById('result').innerHTML = '<p>Error retrieving HTML content</p>';
+            document.getElementById('result').innerHTML = '<p>Ошибка получения кода веб-страницы</p>';
             return;
           }
           const htmlContent = results[0].result;
@@ -125,12 +125,12 @@ function fetchReportImage(data_dict) {
       });
     } else {
       console.log('No image data received');
-      document.getElementById('result').innerHTML += '<p>No image data received</p>';
+      document.getElementById('result').innerHTML += '<p>Отчет не был получен</p>';
     }
   })
   .catch(error => {
     console.error('Fetch error:', error);
-    document.getElementById('result').innerHTML += '<p>Error retrieving report image</p>';
+    document.getElementById('result').innerHTML += '<p>Запрос не был обработан</p>';
   });
 }
 
@@ -146,7 +146,7 @@ function displayResult(data) {
   const resultHtml = `
     <div style="margin-top: 8px; margin-bottom: 8px">
       <img src="./assets/images/tank_icon.png" alt="Air Pollution Icon" style="width: 32px; height: 32px; transform: translateY(5px)" />
-      <strong style="font-size: 20px">Расход топлива на 100км: <span style="color: black; font-size: 20px">${gas_mileage} л.</span></strong>
+      <strong style="font-size: 20px">Примерный расход топлива на 100км: <span style="color: black; font-size: 20px">${gas_mileage} л.</span></strong>
       <div style="margin-top: 8px; margin-bottom: 8px">
         <img src="./assets/images/emission_icon.png" alt="Park Icon" style="width: 32px; height: 32px; transform: translateY(5px)" />
         <strong style="font-size: 20px">Влияние машины на загрязнение воздуха: <span style="color: ${rgbString}; font-weight: bold;">${effect_index}</span></strong>

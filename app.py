@@ -80,10 +80,15 @@ def analyze_krisha():
             result['aq_index_numeric'] = "Не несет риска, воздух чист"
         if 50 >= aq_index_numeric_saved > 40:
             result['aq_index_numeric'] = "Минимальное"
-        if 90 > aq_index_numeric_saved > 50:
+        if 70 >= aq_index_numeric_saved > 50:
             result['aq_index_numeric'] = "Средняя"
+        if 80 >= aq_index_numeric_saved > 70:
+            result['aq_index_numeric'] = "Повышенная"
+        if 90 > aq_index_numeric_saved > 80:
+            result['aq_index_numeric'] = "Высокая"
         if aq_index_numeric_saved >= 90:
             result['aq_index_numeric'] = "Опасная"
+
         two_gis_key = os.getenv('OPENAI_API_KEY')
         parks = make_2gis_request_and_return_object_count(
         two_gis_key,

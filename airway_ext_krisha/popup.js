@@ -101,7 +101,7 @@ function fetchReportImage(data_dict) {
   })
   .catch(error => {
     console.error('Fetch error:', error);
-    document.getElementById('result').innerHTML += '<p>Error retrieving report image</p>';
+    document.getElementById('result').innerHTML += '<p>Запрос не был обработан</p>';
   });
 }
 

@@ -123,7 +123,7 @@ def generate_report_for_an_apartment(
         emoji_height = int(emoji_image.height * 0.2)
         emoji_image.thumbnail((emoji_width, emoji_height))
         template.paste(emoji_image, (630, 370))
-        drawCertificate.text((450, 630), "Минимальный, воздух чист", font=indexWarnFont, fill=(Rpm25, Gpm25, Bpm25))
+        drawCertificate.text((450, 630), "Не несет риска, воздух чист", font=indexWarnFont, fill=(Rpm25, Gpm25, Bpm25))
     if 50 >= aqIndex > 40:
         emoji_image = Image.open("./src/assets/img/icons_for_report/emojis/slightly_smiling_emoji.png")
         emoji_width = int(emoji_image.width * 0.2)
@@ -131,7 +131,7 @@ def generate_report_for_an_apartment(
         emoji_image.thumbnail((emoji_width, emoji_height))
         template.paste(emoji_image, (630, 370))
 
-        drawCertificate.text((450, 630), "Не несет риска", font=indexWarnFont, fill=(Rpm25, Gpm25, Bpm25))
+        drawCertificate.text((450, 630), "Минимальный", font=indexWarnFont, fill=(Rpm25, Gpm25, Bpm25))
     if 70 >= aqIndex > 50:
         emoji_image = Image.open("./src/assets/img/icons_for_report/emojis/neutral_emoji.png")
         emoji_width = int(emoji_image.width * 0.2)
