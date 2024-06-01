@@ -14,8 +14,8 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "48": "./assets/images/air_q_ext_window1.png",
-      "96": "./assets/images/air_q_ext_window2.png"
+      "48": "./assets/images/krisha_icon_small.png",
+      "96": "./assets/images/krisha_icon_large.png"
     }
   },
   "web_accessible_resources":[
