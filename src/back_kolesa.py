@@ -35,7 +35,6 @@ def get_car_recommendations(price: int) -> str:
             if ',' in price:
                 price = price.replace(',', '')
 
-
             if int(price) - 1200000 <= car_price <= int(price) + 1200000:
                 # Check if it's an electric or non-electric car
                 if car_type == 'non-ev':
@@ -60,12 +59,12 @@ def get_car_recommendations(price: int) -> str:
 
 def read_remote_kolesa_page(html_car_data: str) -> dict:
     """
-            Read the html file of the kolesa listing
-        Args:
-            html_car_data (str):
-        Returns:
-            dict: car specific data
-        """
+        Read the html file of the kolesa listing
+    Args:
+        html_car_data (str):
+    Returns:
+        dict: car specific data
+    """
     car_info = {
         "car_title": None,
         "generation": None,
@@ -98,15 +97,17 @@ def read_remote_kolesa_page(html_car_data: str) -> dict:
         elif title == "Привод":
             car_info["N-wheel drive"] = value.strip()
 
-    if car_info["distance run (km)"] is None:
-        car_info["distance run (km)"] = "Новая, без пробега"
+    if re.search(r'data-test="search-label-new-auto"', html_car_data):
+        car_info["distance run (km)"] = "0, новый автомобиль"
+    else:
+        car_info["distance run (km)"] = "Пробег не указан"
 
     name_pattern = r'"name":"(.*?)"'
     name_match = re.search(name_pattern, html_car_data)
     if name_match:
         car_info["car_title"] = name_match.group(1)
         car_info["car_title"] = car_info["car_title"].split(' г.')[0]
-    print(car_info)
+
     # Translating car information
     translator = Translator(to_lang="en", from_lang="ru")
     # for key, value in car_info.items():
