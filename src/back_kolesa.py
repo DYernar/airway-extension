@@ -94,13 +94,15 @@ def read_remote_kolesa_page(html_car_data: str) -> dict:
             car_info["engine_displacement"] = value.strip()
         elif title == "Пробег":
             car_info["distance run (km)"] = value.strip()
+
         elif title == "Привод":
             car_info["N-wheel drive"] = value.strip()
 
-    if re.search(r'data-test="search-label-new-auto"', html_car_data):
-        car_info["distance run (km)"] = "0, новый автомобиль"
-    else:
-        car_info["distance run (km)"] = "Пробег не указан"
+    if car_info["distance run (km)"] == None:
+        if re.search(r'data-test="search-label-new-auto"', html_car_data):
+            car_info["distance run (km)"] = "0, новый автомобиль"
+        else:
+            car_info["distance run (km)"] = "Пробег не указан"
 
     name_pattern = r'"name":"(.*?)"'
     name_match = re.search(name_pattern, html_car_data)
