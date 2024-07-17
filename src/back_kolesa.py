@@ -99,6 +99,7 @@ def read_remote_kolesa_page(html_car_data: str) -> dict:
             car_info["N-wheel drive"] = value.strip()
 
     if car_info["distance run (km)"] == None:
+        print(car_info["distance run (km)"])
         if re.search(r'data-test="search-label-new-auto"', html_car_data):
             car_info["distance run (km)"] = "0, новый автомобиль"
         else:
