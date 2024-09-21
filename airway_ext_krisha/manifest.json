@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Krisha Listing Analyzer DEV",
+    "version": "1.0",
+    "description": "Analyze real estate listings for air quality and nearby infrastructure.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "./assets/images/krisha_icon_small.png",
+        "96": "./assets/images/krisha_icon_large.png"
+      }
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+  }

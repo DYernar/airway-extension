@@ -405,9 +405,12 @@ def test_generate_report_for_an_apartment(
 
     save_png_as_pdf(pathToSave, pathToPdf)
 
+
     buffered = io.BytesIO()
-    template.save(buffered, format="PNG")
+    template_image = Image.open("./src/assets/img/dev_file.png")
+    template_image.save(buffered, format="PNG")
     img_str = base64.b64encode(buffered.getvalue()).decode()
+
 
     return img_str
 
