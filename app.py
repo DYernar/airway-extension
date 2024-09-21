@@ -138,7 +138,7 @@ def get_krisha_report():
     #         data['pm10'],
     #         data['co'],
     #         ""
-        )
+        
 
         new_dict = {'report_image': image_base64}
         return jsonify(new_dict)
