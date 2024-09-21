@@ -123,22 +123,22 @@ def analyze_krisha():
 def get_krisha_report():
     try:
 
-    #     data = request.json.get('data', {})
+        data = request.json.get('data', {})
 
-    #    # text_for_report = generate_gpt_apartment_report(data)
-    #     image_base64 = test_generate_report_for_an_apartment(
-    #         data['latitude'],
-    #         data['longitude'],
-    #         data['aq_index_numeric_int'],
-    #         data['aq_index_color'],
-    #         data['color_pm25'],
-    #         data['color_pm10'],
-    #         data['color_co'],
-    #         data['pm25'],
-    #         data['pm10'],
-    #         data['co'],
-    #         ""
-        
+       # text_for_report = generate_gpt_apartment_report(data)
+        image_base64 = test_generate_report_for_an_apartment(
+            data['latitude'],
+            data['longitude'],
+            data['aq_index_numeric_int'],
+            data['aq_index_color'],
+            data['color_pm25'],
+            data['color_pm10'],
+            data['color_co'],
+            data['pm25'],
+            data['pm10'],
+            data['co'],
+            ""
+        )
 
         new_dict = {'report_image': image_base64}
         return jsonify(new_dict)
